@@ -1,0 +1,31 @@
+# P03 — Kebutuhan Sistem Peminjaman Laboratorium
+
+## 1. Studi Kasus
+
+**Sistem Informasi Peminjaman dan Pengembalian Peralatan Laboratorium Kampus**
+
+Skenario ini merupakan bahan latihan untuk menganalisis kebutuhan sistem peminjaman peralatan laboratorium.
+
+Mahasiswa mengajukan peminjaman peralatan dengan memilih alat, jumlah, dan rentang waktu. Sistem memeriksa ketersediaan alat. Jika tersedia dan data lengkap, sistem menyimpan pengajuan dengan status Menunggu keputusan. Mahasiswa dapat mencetak bukti pengajuan pada tampilan konfirmasi. Petugas mengelola data peralatan serta menyetujui atau menolak pengajuan. Kepala laboratorium melihat laporan peminjaman.
+
+## 2. Daftar Kebutuhan
+
+| ID      | Kebutuhan                                                                                            |
+| ------- | ---------------------------------------------------------------------------------------------------- |
+| LAB-R01 | Mahasiswa dapat melihat ketersediaan peralatan.                                                      |
+| LAB-R02 | Petugas dapat mengelola data peralatan.                                                              |
+| LAB-R03 | Mahasiswa dapat mengajukan peminjaman dan sistem memeriksa ketersediaan sebelum menyimpan pengajuan. |
+| LAB-R04 | Mahasiswa dapat mencetak bukti pada konfirmasi pengajuan jika memilihnya.                            |
+| LAB-R05 | Petugas dapat menyetujui atau menolak pengajuan.                                                     |
+| LAB-R06 | Kepala laboratorium dapat melihat laporan peminjaman.                                                |
+
+## 3. Aturan dan Batas Sistem
+
+1. Sistem hanya mencatat dan menyediakan informasi. Perpindahan fisik alat tidak dilakukan oleh perangkat lunak.
+2. Pengguna sudah terautentikasi dan memiliki hak akses sesuai perannya.
+3. Pengajuan yang diterima sistem memiliki status Menunggu keputusan, bukan otomatis Disetujui.
+4. Pengajuan untuk alat yang tidak tersedia tidak disimpan sebagai pengajuan berhasil.
+5. Pencetakan bukti bukan syarat keberhasilan pengajuan.
+6. Persetujuan petugas belum dimodelkan sebagai reservasi teknis stok.
+7. Pengambilan, pengembalian, kondisi alat, dan denda belum dianalisis dalam model ini.
+8.
