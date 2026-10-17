@@ -1,0 +1,12 @@
+# Jobsheet Review — Sistem Informasi Akademik
+
+| No. | Temuan                                                             | Perbaikan yang diperlukan                                                                                                                                               | Alasan                                                                         |
+| --- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 1   | Kondisi pada relasi `<<extend>>` belum dicantumkan                 | Tambahkan kondisi `[pengajuan berhasil disimpan dan mahasiswa memilih unduh]` pada relasi `<<extend>>`                                                                  | Menjelaskan kapan use case Unduh Bukti Pengajuan dijalankan                    |
+| 2   | Extension point belum dicantumkan secara eksplisit                 | Tambahkan extension point pada UC-01 Ajukan KRS jika diwajibkan oleh modul                                                                                              | Menunjukkan titik perluasan untuk perilaku opsional pada use case              |
+| 3   | Garis asosiasi Mahasiswa menuju UC-03 melewati area tengah diagram | Atur ulang posisi use case atau jalur garis agar diagram lebih rapi                                                                                                     | Memudahkan pembacaan hubungan aktor dengan use case                            |
+| 4   | Pascakondisi pengajuan perlu dipastikan konsisten                  | Tegaskan bahwa pengajuan yang berhasil disimpan berstatus menunggu persetujuan dosen wali, sedangkan validasi gagal tidak menghasilkan pengajuan yang berhasil disimpan | Menjaga konsistensi antara diagram, deskripsi use case, dan skenario pengujian |
+
+## Kesimpulan Review
+
+Berdasarkan hasil pemeriksaan, diagram use case Sistem Informasi Akademik sudah memiliki aktor, batas sistem, dan relasi `<<include>>` serta `<<extend>>` yang sesuai. Revisi difokuskan pada penjelasan kondisi perluasan, pemeriksaan extension point sesuai ketentuan modul, kerapian diagram, dan konsistensi pascakondisi. Setelah revisi dilakukan, diagram dan deskripsi use case disimpan sebagai versi revisi.
