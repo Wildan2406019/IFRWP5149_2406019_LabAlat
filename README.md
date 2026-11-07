@@ -1,8 +1,7 @@
-**Identitas-**
+# Praktikum Analisis dan Desain Berorientasi Objek
 
-- Nama: Haikal Muhamad Sabqi
-- NIM: 2406020
-- Kelas: A
-- Mata Kuliah: Praktikum Analisis & Desain Berorientasi Objek
-- Status: Latihan Pertemuan 4 USE CASE DIAGRAM LANJUTAN: GENERALIZATION DAN
-  COLLABORATION
+- Nama: Wildan Sonhajul Mukarom
+- NIM: 2406019
+- Kelas: Informatika A
+- Kakas: Visual Studio Code dan draw.io
+- Studi kasus: LAB dan SIA
