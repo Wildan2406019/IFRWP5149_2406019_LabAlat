@@ -195,7 +195,7 @@ lalu tambahkan bertahap: aktor umum dan aktor khusus beserta generalization
 aktor, use case layanan hasil studi, use case pengelolaan data mahasiswa
 beserta generalization use case, dan terakhir dua collaboration beserta
 realization. Simpan hasilnya pada folder 04*model_analisis/P04/SIA/ dengan
-nama P04*<2406020>\_SIA_notasi_usecase_v01.drawio beserta ekspor PNG dengan versi
+nama P04*<2406019>\_SIA_notasi_usecase_v01.drawio beserta ekspor PNG dengan versi
 yang sama. Diagram akhir memuat fungsi jadwal, fungsi KRS, dan fungsi hasil
 studi dalam satu diagram Sistem Informasi Akademik.
 
@@ -221,4 +221,4 @@ studi dalam satu diagram Sistem Informasi Akademik.
 
 **Kesimpulan:** Konsisten dengan batasan tugas bahwa data mahasiswa yang masih memiliki data akademik aktif tidak boleh dihapus.
 
-<!-- Riview & Revisi disimpan di folder 06_laporan/P04_2406020_jobsheet_review_v01.md -->
+<!-- Riview & Revisi disimpan di folder 06_laporan/P04_2406019_jobsheet_review_v01.md -->

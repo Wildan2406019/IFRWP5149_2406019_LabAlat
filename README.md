@@ -1,7 +1,7 @@
-# Praktikum Analisis dan Desain Berorientasi Objek
+**Identitas-**
 
 - Nama: Wildan Sonhajul Mukarom
 - NIM: 2406019
-- Kelas: Informatika A
-- Kakas: Visual Studio Code dan draw.io
-- Studi kasus: LAB dan SIA
+- Kelas: A
+- Mata Kuliah: Praktikum Analisis & Desain Berorientasi Objek
+- Status: Pertemuan 7 - ASSESMENT
