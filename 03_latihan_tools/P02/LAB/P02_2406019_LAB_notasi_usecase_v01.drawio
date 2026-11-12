@@ -28,13 +28,13 @@
         <mxCell id="MQ2vUGxm3rPDb6ULkRp5-6" parent="SXP2wp4ESsQUzi1hQtYm-3" style="ellipse;html=1;whiteSpace=wrap;" value="Cetak bukti pengajuan&amp;nbsp;" vertex="1">
           <mxGeometry height="60" width="120" x="50" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="vZMTSCj_bx8J8wDDzWrA-11" edge="1" parent="SXP2wp4ESsQUzi1hQtYm-3" source="SXP2wp4ESsQUzi1hQtYm-8" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=1;exitY=0.333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="SXP2wp4ESsQUzi1hQtYm-9" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
+        <mxCell id="vZMTSCj_bx8J8wDDzWrA-11" edge="1" parent="SXP2wp4ESsQUzi1hQtYm-3" source="MQ2vUGxm3rPDb6ULkRp5-1" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=1;exitY=0.333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="MQ2vUGxm3rPDb6ULkRp5-2" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;">
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="200" y="325" as="sourcePoint" />
             <mxPoint x="360" y="325" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="vZMTSCj_bx8J8wDDzWrA-10" edge="1" parent="SXP2wp4ESsQUzi1hQtYm-3" source="MQ2vUGxm3rPDb6ULkRp5-6" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=0.406;exitY=-0.057;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="SXP2wp4ESsQUzi1hQtYm-8" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;">
+        <mxCell id="vZMTSCj_bx8J8wDDzWrA-10" edge="1" parent="SXP2wp4ESsQUzi1hQtYm-3" source="MQ2vUGxm3rPDb6ULkRp5-6" style="html=1;verticalAlign=bottom;labelBackgroundColor=none;endArrow=open;endFill=0;dashed=1;rounded=0;exitX=0.406;exitY=-0.057;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="MQ2vUGxm3rPDb6ULkRp5-1" value="«extend» [mahasiswa memilih cetak]">
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="100" y="370" as="sourcePoint" />
             <mxPoint x="260" y="370" as="targetPoint" />
@@ -61,10 +61,7 @@
         <mxCell id="vZMTSCj_bx8J8wDDzWrA-3" edge="1" parent="1" source="MQ2vUGxm3rPDb6ULkRp5-1" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="SXP2wp4ESsQUzi1hQtYm-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="vZMTSCj_bx8J8wDDzWrA-6" edge="1" parent="1" source="SXP2wp4ESsQUzi1hQtYm-5" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.989;entryY=0.672;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="MQ2vUGxm3rPDb6ULkRp5-2">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="vZMTSCj_bx8J8wDDzWrA-8" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Petugas Laboran" vertex="1">
+        <mxCell id="vZMTSCj_bx8J8wDDzWrA-8" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Kepala Laboratorium" vertex="1">
           <mxGeometry height="60" width="40" x="720" y="670" as="geometry" />
         </mxCell>
         <mxCell id="vZMTSCj_bx8J8wDDzWrA-9" edge="1" parent="1" source="MQ2vUGxm3rPDb6ULkRp5-4" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" target="vZMTSCj_bx8J8wDDzWrA-8">
