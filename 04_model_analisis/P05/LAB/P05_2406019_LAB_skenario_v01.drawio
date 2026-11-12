@@ -672,7 +672,7 @@
             <mxRectangle height="110" width="190" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1_sI-JURVtXcFVOeEYRm-10" parent="1_sI-JURVtXcFVOeEYRm-8" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;align=left;verticalAlign=top;" value="Bukti pengajuan tercetak sebagai tambahan&lt;br/&gt;bersyarat pada pengajuanMahasiswa yang memilih cetak pada&lt;br/&gt;konfirmasi pengajuan menerima bukti&lt;br/&gt;pengajuan dengan nomor pengajuan. Cabang&lt;br/&gt;ini berlaku dengan condition [mahasiswa&lt;br/&gt;memilih cetak] dan extension point Bukti&lt;br/&gt;pengajuan tersedia pada LAB-UC03&lt;br/&gt;&amp;nbsp;" vertex="1">
+        <mxCell id="1_sI-JURVtXcFVOeEYRm-10" parent="1_sI-JURVtXcFVOeEYRm-8" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;align=left;verticalAlign=top;" value="Bukti pengajuan dapat dicetak setelah pengajuan tersimpan." vertex="1">
           <mxGeometry height="110" width="350" x="190" as="geometry">
             <mxRectangle height="110" width="350" as="alternateBounds" />
           </mxGeometry>
@@ -685,7 +685,7 @@
             <mxRectangle height="80" width="190" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1_sI-JURVtXcFVOeEYRm-13" parent="1_sI-JURVtXcFVOeEYRm-11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;align=left;verticalAlign=top;" value="Sistem memeriksa jumlah dan status peralatan&lt;br/&gt;yang dipilih peminjam dan menyampaikan&lt;br/&gt;hasilnya kepada alur pengajuan. Use case ini&lt;br/&gt;berjalan di dalam UC03 dan tidak mempunyai&lt;br/&gt;interaksi langsung dengan aktor" vertex="1">
+        <mxCell id="1_sI-JURVtXcFVOeEYRm-13" parent="1_sI-JURVtXcFVOeEYRm-11" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;pointerEvents=1;align=left;verticalAlign=top;" value="Mahasiswa memilih cetak bukti setelah pengajuan tersimpan. Sistem menampilkan bukti beserta nomor pengajuan dan mencetaknya setelah dikonfirmasi." vertex="1">
           <mxGeometry height="80" width="350" x="190" as="geometry">
             <mxRectangle height="80" width="350" as="alternateBounds" />
           </mxGeometry>
