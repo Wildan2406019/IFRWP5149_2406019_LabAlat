@@ -1,3 +1,7 @@
-identitas, 2406019_Wildan.sonhajul.m    
-Kakas, DRAW.IO
-satus "Latihan Pertemuan 1 Pengenalan Lingkungan Praktikum dan Kakas Pemodelan UML
+# Praktikum Analisis dan Desain Berorientasi Objek
+
+- Nama: Wildan Sonhajul Mukarom
+- NIM: 2406019
+- Kelas: Informatika A
+- Kakas: Visual Studio Code dan draw.io
+- Studi kasus: LAB dan SIA

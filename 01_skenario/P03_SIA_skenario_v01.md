@@ -2,84 +2,84 @@
 
 ## 1. Kebutuhan Fungsional
 
-| ID | Kebutuhan |
-|---|---|
-| SIA-R03 | Mahasiswa memiliki kemampuan untuk mengajukan KRS. |
-| SIA-R04 | Sistem melakukan pemeriksaan validitas KRS dalam proses pengajuan. |
-| SIA-R05 | Mahasiswa dapat mengunduh bukti pengajuan apabila memilih opsi tersebut saat konfirmasi pengajuan. |
-| SIA-R06 | Dosen wali dapat menentukan persetujuan atau penolakan terhadap pengajuan KRS. |
+| ID      | Kebutuhan                                                                  |
+| ------- | -------------------------------------------------------------------------- |
+| SIA-R03 | Mahasiswa dapat mengajukan KRS.                                            |
+| SIA-R04 | Sistem memvalidasi KRS sebagai bagian dari pengajuan.                      |
+| SIA-R05 | Mahasiswa dapat mengunduh bukti jika memilihnya pada konfirmasi pengajuan. |
+| SIA-R06 | Dosen wali dapat memproses persetujuan atau penolakan KRS.                 |
 
 ## 2. Kebutuhan dari Pertemuan Sebelumnya
 
-| ID | Kebutuhan |
-|---|---|
-| SIA-R01 | Mahasiswa dapat mengakses informasi jadwal perkuliahan. |
-| SIA-R02 | Admin akademik memiliki wewenang untuk mengatur jadwal kuliah. |
+| ID      | Kebutuhan                                     |
+| ------- | --------------------------------------------- |
+| SIA-R01 | Mahasiswa dapat melihat jadwal kuliah.        |
+| SIA-R02 | Admin akademik dapat mengelola jadwal kuliah. |
 
-## 3. Batasan dan Asumsi Sistem
+## 3. Batas dan Asumsi
 
-1. Pengguna sudah berhasil melakukan autentikasi.
-2. Informasi mata kuliah, persyaratan mata kuliah, dan jadwal perkuliahan telah tersedia.
-3. Apabila validasi tidak berhasil, pengajuan belum dianggap berhasil disimpan.
-4. Pengunduhan bukti tidak menjadi ketentuan wajib agar pengajuan dinyatakan berhasil.
-5. Pengajuan KRS yang sudah tersimpan masih memerlukan persetujuan dosen wali.
-6. Proses pembayaran, pengelolaan nilai, dan penerapan basis data tidak termasuk dalam ruang lingkup tugas.
+1. Pengguna telah terautentikasi.
+2. Data mata kuliah, prasyarat, dan jadwal tersedia.
+3. Validasi yang gagal menyebabkan pengajuan belum berhasil tersimpan.
+4. Unduh bukti bukan syarat keberhasilan pengajuan.
+5. KRS yang tersimpan belum berarti disetujui dosen wali.
+6. Pembayaran, pengisian nilai, dan implementasi basis data berada di luar tugas.
 
-## 4. Alur Utama Sistem
+## 4. Alur Utama
 
-1. Mahasiswa menentukan mata kuliah yang ingin diajukan.
-2. Sistem memeriksa kelengkapan data, persyaratan mata kuliah, serta kemungkinan benturan jadwal.
-3. Apabila seluruh pemeriksaan berhasil, sistem menyimpan pengajuan KRS dengan status menunggu persetujuan dosen wali.
-4. Sistem memberikan informasi bahwa pengajuan telah berhasil disimpan.
-5. Mahasiswa menentukan apakah bukti pengajuan akan diunduh.
-6. Dosen wali memiliki kewenangan untuk menyetujui atau menolak pengajuan KRS disertai catatan keputusan.
+1. Mahasiswa memilih mata kuliah.
+2. Sistem memvalidasi kelengkapan, prasyarat, dan benturan jadwal.
+3. Jika validasi berhasil, sistem menyimpan pengajuan KRS dengan status menunggu persetujuan dosen wali.
+4. Sistem menampilkan konfirmasi penyimpanan.
+5. Mahasiswa memilih apakah akan mengunduh bukti pengajuan.
+6. Dosen wali dapat menyetujui atau menolak KRS dan memberikan catatan keputusan.
 
 ## Langkah 2 — Identifikasi Aktor dan Use Case
 
 ### A. Daftar Aktor
 
-| No. | Nama Aktor | Deskripsi |
-|---|---|---|
-| 1 | Mahasiswa | Mengirimkan pengajuan KRS dan menentukan apakah bukti pengajuan perlu diunduh. |
-| 2 | Dosen Wali | Menilai pengajuan KRS, menetapkan persetujuan atau penolakan, serta menyertakan catatan keputusan. |
+| No. | Nama Aktor | Deskripsi                                                                    |
+| --- | ---------- | ---------------------------------------------------------------------------- |
+| 1   | Mahasiswa  | Mengajukan KRS dan memilih untuk mengunduh bukti pengajuan.                  |
+| 2   | Dosen Wali | Memproses persetujuan atau penolakan KRS serta memberikan catatan keputusan. |
 
 ### B. Katalog Use Case
 
-| ID | Nama Fungsi | Aktor Terkait | Sumber Kebutuhan |
-|---|---|---|---|
-| UC-01 | Ajukan KRS | Mahasiswa | SIA-R03 |
-| UC-02 | Validasi KRS | Sistem, sebagai bagian dari pengajuan oleh Mahasiswa | SIA-R04 |
-| UC-03 | Unduh Bukti Pengajuan | Mahasiswa | SIA-R05 |
-| UC-04 | Proses Keputusan KRS | Dosen Wali | SIA-R06 |
+| ID    | Nama Fungsi           | Aktor Terkait                                   | Sumber Kebutuhan |
+| ----- | --------------------- | ----------------------------------------------- | ---------------- |
+| UC-01 | Ajukan KRS            | Mahasiswa                                       | SIA-R03          |
+| UC-02 | Validasi KRS          | Sistem, sebagai bagian dari pengajuan Mahasiswa | SIA-R04          |
+| UC-03 | Unduh Bukti Pengajuan | Mahasiswa                                       | SIA-R05          |
+| UC-04 | Proses Keputusan KRS  | Dosen Wali                                      | SIA-R06          |
 
 ### C. Batas Identifikasi
 
-Pengenalan aktor dan use case dibatasi pada kegiatan pengajuan KRS, pemeriksaan validitas pengajuan, pengunduhan bukti, serta penetapan keputusan oleh dosen wali. SIA-R01 dan SIA-R02 tetap digunakan dengan identitas awalnya sebagai kebutuhan dari Pertemuan 2, tetapi keduanya tidak dicantumkan sebagai fungsi utama dalam katalog use case ini.
+Identifikasi aktor dan use case difokuskan pada proses pengajuan KRS, validasi pengajuan, pengunduhan bukti, serta pemrosesan keputusan oleh dosen wali. Kebutuhan SIA-R01 dan SIA-R02 tetap dipertahankan dengan ID aslinya sebagai kebutuhan dari Pertemuan 2, tetapi tidak dimasukkan sebagai fungsi utama pada katalog ini.
 
 ## Langkah 3 — Menentukan Include
 
 ### Relasi Include
 
-- **Sumber:** UC-01 — Ajukan KRS.
-- **Tujuan:** UC-02 — Validasi KRS.
-- **Proses yang disertakan:** Pemeriksaan kelengkapan pengajuan, persyaratan mata kuliah, dan kemungkinan benturan jadwal.
+- **Sumber:** UC-01 — Ajukan KRS
+- **Tujuan:** UC-02 — Validasi KRS
+- **Perilaku yang disertakan:** Memeriksa kelengkapan pengajuan, prasyarat mata kuliah, dan benturan jadwal.
 
-### Alasan Penggunaan Relasi
+### Alasan Relasi
 
-Relasi `<<include>>` diterapkan karena validasi merupakan tahapan wajib dalam setiap proses pengajuan KRS. Apabila hasil pemeriksaan menunjukkan adanya ketidaksesuaian, pengajuan tidak dapat dinyatakan berhasil disimpan.
+Relasi `<<include>>` digunakan karena validasi merupakan proses wajib yang harus dilakukan setiap kali mahasiswa mengajukan KRS. Jika validasi gagal, pengajuan belum berhasil tersimpan.
 
 ## Langkah 4 — Menentukan Extend
 
 ### Relasi Extend
 
-- **Sumber:** UC-03 — Unduh Bukti Pengajuan.
-- **Tujuan:** UC-01 — Ajukan KRS.
-- **Kondisi:** Pengajuan KRS sudah berhasil disimpan, sistem telah menampilkan konfirmasi penyimpanan, dan mahasiswa memilih opsi untuk mengunduh bukti.
-- **Perilaku tambahan:** Sistem menyiapkan bukti pengajuan agar dapat diunduh oleh mahasiswa.
+- **Sumber:** UC-03 — Unduh Bukti Pengajuan
+- **Tujuan:** UC-01 — Ajukan KRS
+- **Kondisi:** Pengajuan KRS berhasil disimpan, konfirmasi penyimpanan ditampilkan, dan mahasiswa memilih untuk mengunduh bukti.
+- **Perilaku tambahan:** Sistem menyediakan bukti pengajuan untuk diunduh oleh mahasiswa.
 
-### Alasan Penggunaan Relasi
+### Alasan Relasi
 
-Relasi `<<extend>>` digunakan karena pengunduhan bukti merupakan aktivitas tambahan yang tidak wajib dilakukan dalam pengajuan KRS. Mahasiswa bebas menentukan apakah ingin mengunduh bukti atau melewati pilihan tersebut. Dengan demikian, pengajuan yang sudah berhasil disimpan tetap dinyatakan berhasil meskipun mahasiswa tidak mengunduh buktinya.
+Relasi `<<extend>>` digunakan karena pengunduhan bukti bukan proses wajib dalam pengajuan KRS. Mahasiswa dapat memilih untuk mengunduh bukti atau tidak. Jika mahasiswa tidak memilih unduh bukti, pengajuan yang berhasil disimpan tetap dianggap berhasil.
 
 ## Langkah 5 — Deskripsi Use Case
 
@@ -87,144 +87,144 @@ Relasi `<<extend>>` digunakan karena pengunduhan bukti merupakan aktivitas tamba
 
 **Aktor:** Mahasiswa
 
-**Tujuan:** Mengirimkan rencana pengambilan mata kuliah untuk memperoleh persetujuan dari dosen wali.
+**Tujuan:** Mengajukan rencana mata kuliah untuk mendapatkan persetujuan dosen wali.
 
 **Prasyarat:**
 
-- Mahasiswa sudah terautentikasi.
-- Informasi mata kuliah dan jadwal perkuliahan tersedia.
+- Mahasiswa telah terautentikasi.
+- Data mata kuliah dan jadwal tersedia.
 
 **Alur Utama:**
 
-1. Mahasiswa menentukan mata kuliah yang akan dimasukkan ke dalam pengajuan KRS.
-2. Mahasiswa mengirimkan pengajuan KRS kepada sistem.
-3. Sistem melakukan pemeriksaan melalui UC-02 Validasi KRS.
-4. Jika pemeriksaan berhasil, sistem menyimpan pengajuan dengan status menunggu persetujuan dosen wali.
-5. Sistem menampilkan pemberitahuan bahwa pengajuan berhasil disimpan.
-6. Mahasiswa memiliki pilihan untuk mengunduh bukti pengajuan melalui UC-03.
+1. Mahasiswa memilih mata kuliah yang akan diajukan.
+2. Mahasiswa mengirim pengajuan KRS.
+3. Sistem menjalankan validasi KRS melalui UC-02.
+4. Jika validasi berhasil, sistem menyimpan pengajuan dengan status menunggu persetujuan dosen wali.
+5. Sistem menampilkan konfirmasi bahwa pengajuan berhasil disimpan.
+6. Mahasiswa dapat memilih untuk mengunduh bukti pengajuan melalui UC-03.
 
 **Alur Alternatif:**
 
-- Apabila pemeriksaan tidak berhasil, sistem menampilkan keterangan mengenai kegagalan tersebut dan pengajuan belum dinyatakan berhasil tersimpan.
+- Jika validasi gagal, sistem menampilkan informasi kegagalan dan pengajuan belum berhasil tersimpan.
 
 **Pascakondisi:**
 
-- Jika proses berhasil, pengajuan KRS tersimpan dengan status menunggu persetujuan dosen wali.
-- Jika proses gagal, pengajuan belum berhasil disimpan.
+- Jika berhasil, pengajuan KRS tersimpan dengan status menunggu persetujuan dosen wali.
+- Jika gagal, pengajuan belum berhasil tersimpan.
 
 ### UC-02 — Validasi KRS
 
 **Aktor:** Sistem, sebagai bagian dari UC-01.
 
-**Tujuan:** Memastikan bahwa pengajuan KRS telah memenuhi ketentuan yang berlaku.
+**Tujuan:** Memeriksa apakah pengajuan KRS memenuhi ketentuan yang ditetapkan.
 
 **Prasyarat:**
 
-- Mahasiswa telah menentukan mata kuliah yang akan diajukan.
-- Data mata kuliah, persyaratan, dan jadwal perkuliahan tersedia.
+- Mahasiswa telah memilih mata kuliah.
+- Data mata kuliah, prasyarat, dan jadwal tersedia.
 
 **Alur Utama:**
 
-1. Sistem memeriksa apakah data pengajuan sudah lengkap.
-2. Sistem memverifikasi persyaratan mata kuliah yang dipilih.
-3. Sistem mengecek apakah terdapat jadwal kuliah yang saling berbenturan.
-4. Jika seluruh pemeriksaan terpenuhi, sistem menetapkan hasil validasi sebagai berhasil.
+1. Sistem memeriksa kelengkapan pengajuan.
+2. Sistem memeriksa prasyarat mata kuliah.
+3. Sistem memeriksa benturan jadwal.
+4. Jika seluruh pemeriksaan terpenuhi, sistem menyatakan validasi berhasil.
 
 **Alur Alternatif:**
 
-- Apabila terdapat pemeriksaan yang tidak terpenuhi, sistem menetapkan validasi sebagai gagal dan menyampaikan penyebabnya.
+- Jika salah satu pemeriksaan gagal, sistem menyatakan validasi gagal dan menampilkan informasi penyebabnya.
 
 **Pascakondisi:**
 
-- Hasil pemeriksaan tersedia sebagai dasar untuk menentukan apakah pengajuan KRS dapat disimpan.
+- Hasil validasi tersedia untuk menentukan apakah pengajuan dapat disimpan.
 
 ### UC-03 — Unduh Bukti Pengajuan
 
 **Aktor:** Mahasiswa.
 
-**Tujuan:** Memperoleh dokumen atau bukti atas pengajuan KRS yang telah dilakukan.
+**Tujuan:** Mendapatkan bukti pengajuan KRS.
 
 **Prasyarat:**
 
-- Pengajuan KRS sudah berhasil disimpan.
-- Sistem telah menampilkan konfirmasi penyimpanan.
+- Pengajuan KRS berhasil disimpan.
+- Konfirmasi penyimpanan telah ditampilkan.
 
 **Alur Utama:**
 
-1. Sistem memberikan opsi untuk mengunduh bukti pengajuan.
-2. Mahasiswa memilih opsi pengunduhan.
-3. Sistem menyiapkan bukti pengajuan agar dapat diunduh.
+1. Sistem menampilkan pilihan untuk mengunduh bukti pengajuan.
+2. Mahasiswa memilih opsi unduh.
+3. Sistem menyediakan bukti pengajuan untuk diunduh.
 
 **Alur Alternatif:**
 
-- Jika mahasiswa melewati opsi pengunduhan, proses pengajuan KRS tetap dinyatakan berhasil.
-- Apabila bukti tidak berhasil disediakan, pengajuan yang sudah tersimpan tetap dipertahankan.
+- Jika mahasiswa tidak memilih opsi unduh, proses pengajuan tetap berhasil.
+- Jika bukti gagal disediakan, pengajuan yang telah tersimpan tidak dibatalkan.
 
 **Pascakondisi:**
 
-- Bukti pengajuan tersedia untuk diunduh apabila proses pengunduhan berhasil.
-- Aktivitas mengunduh bukti tidak mengubah status pengajuan KRS.
+- Bukti tersedia untuk diunduh jika proses berhasil.
+- Status pengajuan tidak berubah hanya karena aktivitas unduh bukti.
 
 ### UC-04 — Proses Keputusan KRS
 
 **Aktor:** Dosen Wali.
 
-**Tujuan:** Menetapkan keputusan atas pengajuan KRS melalui persetujuan atau penolakan.
+**Tujuan:** Memproses pengajuan KRS melalui persetujuan atau penolakan.
 
 **Prasyarat:**
 
-- Pengajuan KRS sudah tersimpan dalam sistem.
-- Status pengajuan masih menunggu persetujuan dosen wali.
+- Pengajuan KRS telah tersimpan.
+- Status pengajuan menunggu persetujuan dosen wali.
 
 **Alur Utama:**
 
-1. Dosen wali membuka data pengajuan KRS milik mahasiswa.
-2. Dosen wali meninjau isi pengajuan tersebut.
-3. Dosen wali menentukan apakah pengajuan disetujui atau ditolak.
-4. Dosen wali menambahkan catatan yang menjelaskan keputusan.
-5. Sistem menyimpan keputusan beserta catatan yang diberikan.
+1. Dosen wali membuka pengajuan KRS mahasiswa.
+2. Dosen wali memeriksa pengajuan.
+3. Dosen wali memilih menyetujui atau menolak KRS.
+4. Dosen wali memberikan catatan keputusan.
+5. Sistem mencatat keputusan dan catatan tersebut.
 
 **Alur Alternatif:**
 
-- Apabila data pengajuan belum tersedia atau belum memenuhi kondisi untuk diproses, sistem belum dapat mencatat keputusan.
+- Jika pengajuan belum tersedia atau belum dapat diproses, keputusan belum dapat dicatat.
 
 **Pascakondisi:**
 
-- Keputusan persetujuan atau penolakan beserta catatan dari dosen wali telah tercatat pada pengajuan KRS.
+- Keputusan persetujuan atau penolakan beserta catatan dosen wali tercatat pada pengajuan.
 
-## Langkah 6 — Menggambar Diagram Use Case
+## Langkah 6 — Gambar Diagram Usecase
 
-Diagram use case dibuat dengan melibatkan dua aktor dan empat use case berikut.
+Disini saya akan menggunakan dua aktor dan empat use case berikut:
 
-| Jenis | Nama |
-|---|---|
-| Aktor | Mahasiswa |
-| Aktor | Dosen Wali |
-| Use Case | UC-01 — Ajukan KRS |
-| Use Case | UC-02 — Validasi KRS |
-| Use Case | UC-03 — Unduh Bukti Pengajuan |
-| Use Case | UC-04 — Proses Keputusan KRS |
+| Jenis   | Nama                          |
+| ------- | ----------------------------- |
+| Aktor   | Mahasiswa                     |
+| Aktor   | Dosen Wali                    |
+| Usecase | UC-01 - Ajukan KRS            |
+| Usecase | UC-02 - Validasi KRS          |
+| Usecase | UC-03 - Unduh Bukti Pengajuan |
+| Usecase | UC-04 - Proses Keputusan KRS  |
 
-## Langkah 7 — Pengujian Konsistensi
+## Langkah 7 — Uji Konsistensi
 
-### a. Validasi Berhasil, tetapi Mahasiswa Tidak Mengunduh Bukti
+### a. Validasi berhasil dan mahasiswa tidak mengunduh bukti
 
-Pemeriksaan KRS dinyatakan berhasil karena seluruh persyaratan telah terpenuhi. Sistem kemudian menyimpan pengajuan dengan status menunggu persetujuan dosen wali dan menampilkan konfirmasi penyimpanan. Mahasiswa memutuskan untuk tidak mengunduh bukti sehingga aktivitas pengunduhan tidak dijalankan.
+Validasi KRS berhasil karena semua persyaratan terpenuhi. Sistem menyimpan pengajuan KRS dengan status menunggu persetujuan dosen wali dan menampilkan konfirmasi. Mahasiswa tidak memilih untuk mengunduh bukti, sehingga proses pengunduhan tidak dilakukan.
 
-**Hasil pengujian:** Konsisten. UC-01 Ajukan KRS tetap berhasil meskipun UC-03 Unduh Bukti Pengajuan tidak dijalankan. Hal ini sesuai dengan relasi `<<extend>>` karena pengunduhan bukti bersifat opsional.
+**Hasil pengujian:** Konsisten. Use case `UC-01 Ajukan KRS` tetap berhasil meskipun `UC-03 Unduh Bukti Pengajuan` tidak dijalankan, karena pengunduhan merupakan proses opsional (`<<extend>>`).
 
-### b. Validasi Gagal
+### b. Validasi gagal
 
-Pemeriksaan KRS tidak berhasil karena terdapat persyaratan yang belum terpenuhi, seperti jadwal kuliah yang berbenturan atau prasyarat mata kuliah yang belum dipenuhi. Sistem memberikan informasi mengenai kegagalan tersebut dan tidak menyimpan pengajuan sebagai pengajuan yang berhasil.
+Validasi KRS gagal karena terdapat persyaratan yang tidak terpenuhi, misalnya jadwal kuliah bentrok atau prasyarat mata kuliah belum terpenuhi. Sistem menampilkan pesan kegagalan dan pengajuan KRS tidak disimpan sebagai pengajuan yang berhasil.
 
-**Hasil pengujian:** Konsisten. UC-02 Validasi KRS merupakan tahapan wajib melalui relasi `<<include>>` dalam UC-01 Ajukan KRS. Jika pemeriksaan gagal, proses tidak berlanjut ke penyimpanan yang berhasil. Oleh karena itu, mahasiswa tidak dapat mengunduh bukti dari pengajuan yang belum berhasil disimpan.
+**Hasil pengujian:** Konsisten. Use case `UC-02 Validasi KRS` merupakan bagian wajib (`<<include>>`) dari `UC-01 Ajukan KRS`. Jika validasi gagal, proses pengajuan tidak dilanjutkan ke penyimpanan yang berhasil dan mahasiswa tidak dapat mengunduh bukti pengajuan yang berhasil.
 
-### c. Validasi Berhasil dan Mahasiswa Memilih Mengunduh Bukti
+### c. Validasi berhasil dan mahasiswa memilih mengunduh bukti
 
-Pemeriksaan KRS berhasil dilakukan, kemudian sistem menyimpan pengajuan dengan status menunggu persetujuan dosen wali. Setelah konfirmasi penyimpanan ditampilkan, mahasiswa memilih untuk mengunduh bukti. Sistem selanjutnya menyediakan bukti pengajuan tersebut.
+Validasi KRS berhasil dan sistem menyimpan pengajuan dengan status menunggu persetujuan dosen wali. Setelah konfirmasi ditampilkan, mahasiswa memilih untuk mengunduh bukti pengajuan dan sistem menyediakan bukti tersebut.
 
-**Hasil pengujian:** Konsisten. UC-03 Unduh Bukti Pengajuan dapat dijalankan sebagai aktivitas tambahan melalui relasi `<<extend>>` apabila mahasiswa memilih opsi pengunduhan setelah pengajuan berhasil disimpan.
+**Hasil pengujian:** Konsisten. `UC-03 Unduh Bukti Pengajuan` dapat dijalankan sebagai proses tambahan (`<<extend>>`) ketika mahasiswa memilih mengunduh bukti setelah pengajuan berhasil disimpan.
 
 ### Kesimpulan Uji Konsistensi
 
-Dari ketiga skenario pengujian tersebut, diagram dan deskripsi use case menunjukkan kesesuaian. Validasi menjadi tahapan wajib dalam pengajuan KRS, sedangkan pengunduhan bukti hanya dilakukan apabila pengajuan berhasil disimpan dan mahasiswa memilih opsi tersebut. Pengajuan yang berhasil disimpan tetap berstatus menunggu persetujuan dosen wali sampai keputusan diberikan.
+Ketiga situasi menunjukkan bahwa diagram dan deskripsi use case sudah konsisten. Validasi selalu menjadi bagian wajib dari pengajuan KRS, sedangkan pengunduhan bukti hanya dilakukan jika pengajuan berhasil dan mahasiswa memilihnya. Status pengajuan yang berhasil disimpan tetap menunggu persetujuan dosen wali, bukan langsung disetujui.
