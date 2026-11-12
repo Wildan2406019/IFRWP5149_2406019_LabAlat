@@ -231,31 +231,32 @@ Kelas: Informatika A
 |---|---|---|
 | 3a | Data tidak lengkap atau tidak sah. | Sistem menolak penyimpanan dan menampilkan pesan kesalahan data. Petugas memperbaiki data, lalu mengirimnya kembali untuk diperiksa. |
 
-## LAB-UC08 — Tambah Data Peralatan
+## LAB-UC09 — Ubah Data Peralatan
 
 | Komponen | Keterangan |
 |---|---|
-| Nama use case | Tambah Data Peralatan |
+| Nama use case | Ubah Data Peralatan |
 | Aktor | Petugas Laboratorium |
-| Tujuan | Menambahkan data peralatan baru ke sistem. |
-| Kondisi awal | Petugas membuka Kelola Data Peralatan dan memilih tambah. |
-| Kondisi akhir | Data peralatan baru tersimpan atau sistem menampilkan kesalahan data. |
-| Hubungan | Varian tambah pada LAB-UC02 — Kelola Data Peralatan. |
+| Tujuan | Memperbarui informasi peralatan yang sudah terdaftar. |
+| Kondisi awal | Petugas membuka Kelola Data Peralatan dan memilih ubah. |
+| Kondisi akhir | Perubahan tersimpan atau sistem menampilkan alasan perubahan ditolak. |
+| Hubungan | Varian ubah pada LAB-UC02 — Kelola Data Peralatan. |
 
 ### Skenario Normal
 
 | Langkah | Kegiatan Aktor | Respons Sistem |
 |---|---|---|
-| 1 | Memilih tambah data peralatan. | Menampilkan formulir data peralatan baru. |
-| 2 | Mengisi data peralatan baru. | Menerima data yang diisi. |
-| 3 | Mengirim data untuk diperiksa. | Memeriksa kelengkapan dan keabsahan data. |
-| 4 | Mengonfirmasi penyimpanan. | Menyimpan data peralatan baru dan menampilkan konfirmasi. |
+| 1 | Memilih peralatan yang akan diubah. | Menampilkan data peralatan yang dipilih. |
+| 2 | Mengubah informasi peralatan. | Menerima perubahan pada formulir. |
+| 3 | Menekan tombol Simpan. | Memeriksa kelengkapan dan keabsahan data. |
+| 4 | Melihat hasil penyimpanan. | Memperbarui data dan menampilkan konfirmasi. |
 
 ### Skenario Alternatif
 
 | Langkah | Kondisi | Respons Sistem dan Tindak Lanjut |
 |---|---|---|
-| 3a | Data tidak lengkap atau tidak sah. | Sistem menolak penyimpanan dan menampilkan pesan kesalahan data. Petugas memperbaiki data, lalu mengirimnya kembali untuk diperiksa. |
+| 1a | Data peralatan tidak ditemukan. | Menampilkan pemberitahuan dan meminta petugas memilih kembali. |
+| 3a | Data belum lengkap atau tidak valid. | Menampilkan kesalahan dan meminta petugas memperbaiki data sebelum menyimpan. |
 
 ## LAB-UC10 — Hapus Data Peralatan
 
