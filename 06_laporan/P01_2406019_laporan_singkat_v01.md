@@ -17,7 +17,7 @@ Diagram menggambarkan alur melihat ketersediaan peralatan. Proses dimulai dari t
 Diagram ini masih berupa latihan dasar. Proses peminjaman, keputusan petugas, serta pengembalian belum dimodelkan pada diagram P01.
 
 ## Catatan Perbaikan
-Pada sumber diagram, simbol awal dan akhir menggunakan lingkaran terisi yang sama. Simbol akhir perlu dibedakan menggunakan activity final berupa lingkaran dengan titik di dalamnya. Bentuk aktivitas juga perlu disesuaikan dengan notasi UML berupa persegi panjang bersudut membulat.
+Simbol akhir sudah diperbaiki menjadi activity final berupa lingkaran dengan titik di dalamnya. Kedua aktivitas sudah menggunakan persegi panjang bersudut membulat. Sumber diagram dan gambar PNG sudah diperbarui.
 
 ## Kesimpulan
-Diagram menunjukkan urutan dasar untuk melihat ketersediaan peralatan. Penyesuaian simbol diperlukan agar notasinya sesuai dengan activity diagram UML.
+Diagram menunjukkan urutan dasar untuk melihat ketersediaan peralatan. Simbol awal, aktivitas, alur, dan simbol akhir sudah disesuaikan dengan notasi dasar activity diagram UML.
